@@ -71,6 +71,21 @@ class DrawingViewController: UIViewController, CDRTranslucentSideBarDelegate, AC
         super.didReceiveMemoryWarning()
     }
     
+    
+    /*
+    お絵かきえりのViewをキャプチャする
+    :戻り値:UIImage
+    */
+    func getUIImageFromDrawingView() -> UIImage {
+        //キャプチャ範囲
+        let capRect: CGRect = self.view.frame
+        
+        //
+        UIGraphicsBeginImageContextWithOptions(capRect.size, false, 0.0)
+        
+        return UIImage()
+    }
+    
     // SideBarViewの中身を更新する
     func updateSideBarView() {
         
@@ -121,6 +136,8 @@ class DrawingViewController: UIViewController, CDRTranslucentSideBarDelegate, AC
     }
 }
 
+
+// MARK: - extension
 extension DrawingViewController: SideBarViewDelegate {
     func sliderChanged(slider: UISlider) {
         // 筆の太さを変更
