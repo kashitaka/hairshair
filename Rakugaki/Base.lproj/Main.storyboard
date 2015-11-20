@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Drawing View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Rakugaki" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DrawingViewController" customModule="Rakugaki" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -20,45 +21,91 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gUe-JY-txS">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gjf-Vi-Qbo">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gjf-Vi-Qbo">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
                                     </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rG4-Y5-MNI" customClass="ACEDrawingView">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="580"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="Gjf-Vi-Qbo" secondAttribute="bottom" id="HWk-Wa-Jdq"/>
-                                    <constraint firstAttribute="trailing" secondItem="Gjf-Vi-Qbo" secondAttribute="trailing" id="TNa-KM-WDl"/>
-                                    <constraint firstItem="Gjf-Vi-Qbo" firstAttribute="top" secondItem="gUe-JY-txS" secondAttribute="top" id="jFt-Eu-jvL"/>
-                                    <constraint firstItem="Gjf-Vi-Qbo" firstAttribute="leading" secondItem="gUe-JY-txS" secondAttribute="leading" id="mFj-k6-Ret"/>
+                                    <constraint firstItem="rG4-Y5-MNI" firstAttribute="centerY" secondItem="Gjf-Vi-Qbo" secondAttribute="centerY" id="0kq-PK-VvN"/>
+                                    <constraint firstItem="rG4-Y5-MNI" firstAttribute="height" secondItem="Gjf-Vi-Qbo" secondAttribute="height" id="1Wd-Ev-B7M"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gjf-Vi-Qbo" secondAttribute="bottom" id="FNS-jG-LVh"/>
+                                    <constraint firstItem="Gjf-Vi-Qbo" firstAttribute="leading" secondItem="gUe-JY-txS" secondAttribute="leading" id="Uzk-Zm-4s4"/>
+                                    <constraint firstItem="rG4-Y5-MNI" firstAttribute="width" secondItem="Gjf-Vi-Qbo" secondAttribute="width" id="k7Z-Nv-n1E"/>
+                                    <constraint firstItem="rG4-Y5-MNI" firstAttribute="centerX" secondItem="Gjf-Vi-Qbo" secondAttribute="centerX" id="xFt-LC-7dR"/>
+                                    <constraint firstItem="Gjf-Vi-Qbo" firstAttribute="top" secondItem="gUe-JY-txS" secondAttribute="top" id="yKi-TO-gGG"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gjf-Vi-Qbo" secondAttribute="trailing" id="zL8-5y-58I"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0Z-tb-Wk4">
-                                <rect key="frame" x="88" y="40" width="50" height="40"/>
-                                <state key="normal" title="reset"/>
-                                <connections>
-                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mBK-YT-GGU"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWX-mS-sbM">
-                                <rect key="frame" x="28" y="40" width="40" height="40"/>
-                                <state key="normal" title="〓"/>
-                                <connections>
-                                    <action selector="getaButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8jq-tD-rAu"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="kNo-6S-u1g">
+                                <rect key="frame" x="20" y="20" width="560" height="40"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWX-mS-sbM" userLabel="slideMenuButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="110" height="40"/>
+                                        <state key="normal" image="geta"/>
+                                        <connections>
+                                            <action selector="getaButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8jq-tD-rAu"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mdE-me-jTO" userLabel="undo">
+                                        <rect key="frame" x="150" y="0.0" width="110" height="40"/>
+                                        <state key="normal" image="undo"/>
+                                        <connections>
+                                            <action selector="undoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JVD-dL-6nt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDx-eq-blS" userLabel="redo">
+                                        <rect key="frame" x="300" y="0.0" width="110" height="40"/>
+                                        <state key="normal" image="redo"/>
+                                        <connections>
+                                            <action selector="redoButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p4a-GM-I0f"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D0Z-tb-Wk4">
+                                        <rect key="frame" x="450" y="0.0" width="110" height="40"/>
+                                        <state key="normal" image="refresh"/>
+                                        <connections>
+                                            <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mBK-YT-GGU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="wWX-mS-sbM" firstAttribute="centerY" secondItem="kNo-6S-u1g" secondAttribute="centerY" id="3jH-XP-iiD"/>
+                                    <constraint firstItem="GDx-eq-blS" firstAttribute="height" secondItem="mdE-me-jTO" secondAttribute="height" id="7Ki-Na-PUr"/>
+                                    <constraint firstItem="wWX-mS-sbM" firstAttribute="height" secondItem="kNo-6S-u1g" secondAttribute="height" id="FmX-zz-PRp"/>
+                                    <constraint firstAttribute="height" constant="40" id="Tl0-qh-mcD"/>
+                                    <constraint firstItem="mdE-me-jTO" firstAttribute="height" secondItem="wWX-mS-sbM" secondAttribute="height" id="c9L-V2-88V"/>
+                                    <constraint firstItem="D0Z-tb-Wk4" firstAttribute="height" secondItem="GDx-eq-blS" secondAttribute="height" id="uvf-tP-LLz"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3jH-XP-iiD"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="gUe-JY-txS" secondAttribute="trailing" id="N6t-Fc-j8x"/>
-                            <constraint firstItem="gUe-JY-txS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cBi-ST-cYO"/>
-                            <constraint firstItem="gUe-JY-txS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="h5E-3p-AM7"/>
-                            <constraint firstItem="gUe-JY-txS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="tts-Zd-dsc"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gUe-JY-txS" secondAttribute="bottom" id="xe3-fB-ACq"/>
+                            <constraint firstAttribute="trailing" secondItem="gUe-JY-txS" secondAttribute="trailing" id="4b7-un-Pmf"/>
+                            <constraint firstItem="kNo-6S-u1g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JcD-vS-sVn"/>
+                            <constraint firstAttribute="bottom" secondItem="gUe-JY-txS" secondAttribute="bottom" id="Mzd-be-MNe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kNo-6S-u1g" secondAttribute="trailing" id="PLM-WF-Zus"/>
+                            <constraint firstItem="gUe-JY-txS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Tcs-wq-hoN"/>
+                            <constraint firstItem="kNo-6S-u1g" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Zzt-2g-Ukh"/>
+                            <constraint firstItem="gUe-JY-txS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="x6g-xh-8ez"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="drawingView" destination="rG4-Y5-MNI" id="QFs-3K-LvM"/>
                         <outlet property="imageContainer" destination="gUe-JY-txS" id="1RH-2E-F1k"/>
                         <outlet property="imageView" destination="Gjf-Vi-Qbo" id="y34-3y-uRI"/>
+                        <outlet property="redoButton" destination="GDx-eq-blS" id="Qv7-7w-SIA"/>
+                        <outlet property="resetButton" destination="D0Z-tb-Wk4" id="JJH-W8-oED"/>
+                        <outlet property="undoButton" destination="mdE-me-jTO" id="PGH-HS-OGn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -66,4 +113,10 @@
             <point key="canvasLocation" x="305" y="429"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="geta" width="25" height="25"/>
+        <image name="redo" width="25" height="25"/>
+        <image name="refresh" width="25" height="25"/>
+        <image name="undo" width="25" height="25"/>
+    </resources>
 </document>

@@ -7,8 +7,9 @@
 //
 
 #import <SDWebImage/UIImageView+WebCache.h>
-#import "KMZDrawView.h"
+#import "ACEDrawingView.h"
 #import "CDRTranslucentSideBar.h"
+#import "NKOColorPickerView.h"
 
 #ifndef Rakugaki_Bridging_Header_h
 #define Rakugaki_Bridging_Header_h

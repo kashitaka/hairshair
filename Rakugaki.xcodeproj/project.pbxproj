@@ -10,7 +10,7 @@
 		37AB59ED1BF3835400B0A0FB /* SideBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37AB59EC1BF3835400B0A0FB /* SideBarView.xib */; };
 		37AB59EF1BF383EF00B0A0FB /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB59EE1BF383EF00B0A0FB /* SideBarView.swift */; };
 		37C189EB1BEDB26C006F92B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C189EA1BEDB26C006F92B3 /* AppDelegate.swift */; };
-		37C189ED1BEDB26C006F92B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C189EC1BEDB26C006F92B3 /* ViewController.swift */; };
+		37C189ED1BEDB26C006F92B3 /* DrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C189EC1BEDB26C006F92B3 /* DrawingViewController.swift */; };
 		37C189F01BEDB26C006F92B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C189EE1BEDB26C006F92B3 /* Main.storyboard */; };
 		37C189F21BEDB26C006F92B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37C189F11BEDB26C006F92B3 /* Assets.xcassets */; };
 		37C189F51BEDB26C006F92B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C189F31BEDB26C006F92B3 /* LaunchScreen.storyboard */; };
@@ -41,7 +41,7 @@
 		37AB59EE1BF383EF00B0A0FB /* SideBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		37C189E71BEDB26C006F92B3 /* Rakugaki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rakugaki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37C189EA1BEDB26C006F92B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		37C189EC1BEDB26C006F92B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		37C189EC1BEDB26C006F92B3 /* DrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewController.swift; sourceTree = "<group>"; };
 		37C189EF1BEDB26C006F92B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37C189F11BEDB26C006F92B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37C189F41BEDB26C006F92B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -110,14 +110,14 @@
 			isa = PBXGroup;
 			children = (
 				37C189EA1BEDB26C006F92B3 /* AppDelegate.swift */,
-				37C189EC1BEDB26C006F92B3 /* ViewController.swift */,
-				37C189EE1BEDB26C006F92B3 /* Main.storyboard */,
+				37C189EC1BEDB26C006F92B3 /* DrawingViewController.swift */,
+				37AB59EE1BF383EF00B0A0FB /* SideBarView.swift */,
 				37C18A181BEDCD4F006F92B3 /* Rakugaki-Bridging-Header.h */,
 				37C189F11BEDB26C006F92B3 /* Assets.xcassets */,
 				37C189F31BEDB26C006F92B3 /* LaunchScreen.storyboard */,
-				37C189F61BEDB26C006F92B3 /* Info.plist */,
 				37AB59EC1BF3835400B0A0FB /* SideBarView.xib */,
-				37AB59EE1BF383EF00B0A0FB /* SideBarView.swift */,
+				37C189EE1BEDB26C006F92B3 /* Main.storyboard */,
+				37C189F61BEDB26C006F92B3 /* Info.plist */,
 			);
 			path = Rakugaki;
 			sourceTree = "<group>";
@@ -328,7 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37AB59EF1BF383EF00B0A0FB /* SideBarView.swift in Sources */,
-				37C189ED1BEDB26C006F92B3 /* ViewController.swift in Sources */,
+				37C189ED1BEDB26C006F92B3 /* DrawingViewController.swift in Sources */,
 				37C189EB1BEDB26C006F92B3 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +460,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -474,7 +475,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.kashitaka.Rakugaki;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos9.1;
+				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/kashitaka/Documents/XcodeSource/Rakugaki/Rakugaki/Rakugaki-Bridging-Header.h";
 			};
 			name = Debug;
@@ -488,7 +489,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jp.kashitaka.Rakugaki;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos9.1;
+				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/kashitaka/Documents/XcodeSource/Rakugaki/Rakugaki/Rakugaki-Bridging-Header.h";
 			};
 			name = Release;
