@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3706A71D1C02E0710041948B /* Drawings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3706A71C1C02E0710041948B /* Drawings.swift */; };
+		3706A7211C02FFD20041948B /* StartMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3706A7201C02FFD20041948B /* StartMenuViewController.swift */; };
+		3706A7231C0300F30041948B /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3706A7221C0300F30041948B /* AlbumViewController.swift */; };
 		37AB59ED1BF3835400B0A0FB /* SideBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37AB59EC1BF3835400B0A0FB /* SideBarView.xib */; };
 		37AB59EF1BF383EF00B0A0FB /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB59EE1BF383EF00B0A0FB /* SideBarView.swift */; };
 		37C189EB1BEDB26C006F92B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C189EA1BEDB26C006F92B3 /* AppDelegate.swift */; };
@@ -39,6 +41,8 @@
 
 /* Begin PBXFileReference section */
 		3706A71C1C02E0710041948B /* Drawings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drawings.swift; sourceTree = "<group>"; };
+		3706A7201C02FFD20041948B /* StartMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartMenuViewController.swift; sourceTree = "<group>"; };
+		3706A7221C0300F30041948B /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		37AB59EC1BF3835400B0A0FB /* SideBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideBarView.xib; sourceTree = "<group>"; };
 		37AB59EE1BF383EF00B0A0FB /* SideBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		37C189E71BEDB26C006F92B3 /* Rakugaki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rakugaki.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +90,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3706A7241C0372D30041948B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				3706A7201C02FFD20041948B /* StartMenuViewController.swift */,
+				37C189EC1BEDB26C006F92B3 /* DrawingViewController.swift */,
+				3706A7221C0300F30041948B /* AlbumViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		37C189DE1BEDB26C006F92B3 = {
 			isa = PBXGroup;
 			children = (
@@ -112,9 +126,9 @@
 			isa = PBXGroup;
 			children = (
 				37C189EA1BEDB26C006F92B3 /* AppDelegate.swift */,
-				37C189EC1BEDB26C006F92B3 /* DrawingViewController.swift */,
 				37AB59EE1BF383EF00B0A0FB /* SideBarView.swift */,
 				3706A71C1C02E0710041948B /* Drawings.swift */,
+				3706A7241C0372D30041948B /* ViewController */,
 				37C18A181BEDCD4F006F92B3 /* Rakugaki-Bridging-Header.h */,
 				37C189F11BEDB26C006F92B3 /* Assets.xcassets */,
 				37C189F31BEDB26C006F92B3 /* LaunchScreen.storyboard */,
@@ -332,8 +346,10 @@
 			files = (
 				3706A71D1C02E0710041948B /* Drawings.swift in Sources */,
 				37AB59EF1BF383EF00B0A0FB /* SideBarView.swift in Sources */,
+				3706A7231C0300F30041948B /* AlbumViewController.swift in Sources */,
 				37C189ED1BEDB26C006F92B3 /* DrawingViewController.swift in Sources */,
 				37C189EB1BEDB26C006F92B3 /* AppDelegate.swift in Sources */,
+				3706A7211C02FFD20041948B /* StartMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

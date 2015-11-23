@@ -23,7 +23,7 @@ public class Drawings {
     // イニシャラザ（失敗可能）
     private init?(){
         // データ保存先パスを取得。Documentディレクトリのパスを取得する
-        let paths = NSSearchPathForDirectoriesInDomains(.DocumentationDirectory, .UserDomainMask, true)
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)
         // 基本的には成功するが念のために要素数をチェックしてから使う
         if paths.count > 0 {
             path = paths[0] as String
@@ -60,16 +60,21 @@ public class Drawings {
     public func append(drawDate: String, drawing: UIImage){
         // ユニークなファイル名を生成する
         let filename = NSUUID().UUIDString + ".png"
-        let fullpath = NSURL(fileURLWithPath: path).URLByAppendingPathComponent(filename).path
-        
+        let fullpath = path.stringByAppendingString("/\(filename)") as String
         //uiimageからpngデータを作成
-        let data = UIImagePNGRepresentation(drawing)
+        let data = NSData(data: UIImagePNGRepresentation(drawing)!)
         
-        // データを書き込み、成功したら配列に格納して保存する
-        if data!.writeToFile(fullpath!, atomically: true){
+        // データを書き込み、配列に格納して保存する
+        let success = data.writeToFile(fullpath, atomically: true)
+        if success {
+            print("save OK")
             drawings[drawDate] = filename
+            save()
+        }else{
+            print("save error")
         }
-        save()
+
+        print(drawings)
     }
     
     // 指定された日付の配列を引数に、その画像を削除する
@@ -84,6 +89,8 @@ public class Drawings {
                     try manager.removeItemAtPath(fullpath)
                     // drawingsの配列から削除
                     self.drawings.removeValueForKey(date)
+                    //
+                    print("\(fullpath)を削除")
                 } catch _ {}
             }
         }
@@ -95,18 +102,29 @@ public class Drawings {
         // 指定された日付が存在しない場合は空のimageを返す
         if drawings[drawDate] == nil {return UIImage()}
         if let filename = drawings[drawDate]{
-            let fullpath = path.stringByAppendingString(filename)
+            let fullpath = path.stringByAppendingString("/\(filename)") as String
             
             if let image = UIImage(contentsOfFile: fullpath){
+                print("img返す")
                 return image
             }
         }
         // 上記に失敗した場合は空のuiimageを返す
-        return UIImage()
+        return UIImage(named: "bouz")!
     }
     
     // 保存済みの写真枚数を返す
     public func count() -> Int {
         return drawings.count
+    }
+    
+    // 保存した画像のkeyをなんか返す
+    public func someKey() -> String{
+        var keyArray: [String] = [String]()
+        for key in drawings.keys{
+            keyArray.append(key)
+        }
+        keyArray.sortInPlace() { $0 > $1}
+        return keyArray[0]
     }
 }

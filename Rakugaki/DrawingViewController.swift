@@ -144,6 +144,18 @@ class DrawingViewController: UIViewController, CDRTranslucentSideBarDelegate, AC
     @IBAction func getaButtonTapped(sender: AnyObject) {
         self.sideBar.show()
     }
+    @IBAction func saveButtonTapped(sender: UIButton) {
+        if let img: UIImage = getUIImageFromDrawingView(){
+            let formatter = NSDateFormatter()
+            formatter.dateFormat = "yyyyMMddHHmmss"
+            let dateNow = formatter.stringFromDate(NSDate())
+            
+            // 保存処理
+            Drawings.shareInstance?.append(dateNow, drawing: img)
+            
+            print("保存終了")
+        }
+    }
 }
 
 
