@@ -15,7 +15,7 @@ class AlbumViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let key = Drawings.shareInstance?.someKey()
+        let key = Drawings.shareInstance?.lastKey()
         let img = Drawings.shareInstance?.image(key!)
         imageView.image = img
     }

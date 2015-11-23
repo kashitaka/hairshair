@@ -119,7 +119,7 @@ public class Drawings {
     }
     
     // 保存した画像のkeyをなんか返す
-    public func someKey() -> String{
+    public func lastKey() -> String{
         var keyArray: [String] = [String]()
         for key in drawings.keys{
             keyArray.append(key)
