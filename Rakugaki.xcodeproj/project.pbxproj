@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3706A71D1C02E0710041948B /* Drawings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3706A71C1C02E0710041948B /* Drawings.swift */; };
 		37AB59ED1BF3835400B0A0FB /* SideBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37AB59EC1BF3835400B0A0FB /* SideBarView.xib */; };
 		37AB59EF1BF383EF00B0A0FB /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB59EE1BF383EF00B0A0FB /* SideBarView.swift */; };
 		37C189EB1BEDB26C006F92B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C189EA1BEDB26C006F92B3 /* AppDelegate.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3706A71C1C02E0710041948B /* Drawings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drawings.swift; sourceTree = "<group>"; };
 		37AB59EC1BF3835400B0A0FB /* SideBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideBarView.xib; sourceTree = "<group>"; };
 		37AB59EE1BF383EF00B0A0FB /* SideBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		37C189E71BEDB26C006F92B3 /* Rakugaki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rakugaki.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -112,6 +114,7 @@
 				37C189EA1BEDB26C006F92B3 /* AppDelegate.swift */,
 				37C189EC1BEDB26C006F92B3 /* DrawingViewController.swift */,
 				37AB59EE1BF383EF00B0A0FB /* SideBarView.swift */,
+				3706A71C1C02E0710041948B /* Drawings.swift */,
 				37C18A181BEDCD4F006F92B3 /* Rakugaki-Bridging-Header.h */,
 				37C189F11BEDB26C006F92B3 /* Assets.xcassets */,
 				37C189F31BEDB26C006F92B3 /* LaunchScreen.storyboard */,
@@ -327,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3706A71D1C02E0710041948B /* Drawings.swift in Sources */,
 				37AB59EF1BF383EF00B0A0FB /* SideBarView.swift in Sources */,
 				37C189ED1BEDB26C006F92B3 /* DrawingViewController.swift in Sources */,
 				37C189EB1BEDB26C006F92B3 /* AppDelegate.swift in Sources */,
