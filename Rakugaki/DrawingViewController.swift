@@ -77,13 +77,23 @@ class DrawingViewController: UIViewController, CDRTranslucentSideBarDelegate, AC
     :戻り値:UIImage
     */
     func getUIImageFromDrawingView() -> UIImage {
-        //キャプチャ範囲
+        //キャプチャ範囲を生成。画面のサイズと同じ
         let capRect: CGRect = self.view.frame
         
-        //
+        // ビットマップ画像のcontextを作成.
         UIGraphicsBeginImageContextWithOptions(capRect.size, false, 0.0)
+        let context: CGContextRef = UIGraphicsGetCurrentContext()!
         
-        return UIImage()
+        // 対象のview内の描画をcontextに複写する.
+        self.view.layer.renderInContext(context)
+        
+        // 現在のcontextのビットマップをUIImageとして取得.
+        let capturedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
+        
+        // contextを閉じる.
+        UIGraphicsEndImageContext()
+        
+        return capturedImage
     }
     
     // SideBarViewの中身を更新する
