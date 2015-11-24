@@ -105,7 +105,6 @@ public class Drawings {
             let fullpath = path.stringByAppendingString("/\(filename)") as String
             
             if let image = UIImage(contentsOfFile: fullpath){
-                print("img返す")
                 return image
             }
         }

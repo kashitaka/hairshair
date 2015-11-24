@@ -155,6 +155,10 @@ class DrawingViewController: UIViewController, CDRTranslucentSideBarDelegate, AC
             
             print("保存終了")
         }
+        
+        // 前画面に戻る
+        self.dismissViewControllerAnimated(true, completion: nil)
+
     }
 }
 

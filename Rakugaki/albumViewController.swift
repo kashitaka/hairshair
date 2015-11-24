@@ -8,11 +8,12 @@
 
 import UIKit
 
-class AlbumCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class AlbumCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    // MARK: - IBOutlets
+    // MARK: - member
     @IBOutlet weak var albumCollectionView: UICollectionView!
     
+    var cellSize: CGSize = CGSize()
     
     // MARK: - UIViewControllerDelegate
     override func viewDidLoad() {
@@ -20,6 +21,13 @@ class AlbumCollectionViewController: UIViewController, UICollectionViewDelegate,
         // collectionViewDelegateの設定
         albumCollectionView.delegate = self
         albumCollectionView.dataSource = self
+        
+        //　collectionViewCellのサイズを設定する
+        cellSize.height = self.view.frame.height / 4
+        cellSize.width = self.view.frame.width / 2 - 3
+        
+        // cellの複数選択を許す
+        self.albumCollectionView.allowsMultipleSelection = true;
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,15 +57,15 @@ class AlbumCollectionViewController: UIViewController, UICollectionViewDelegate,
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    //MARK: - UICollectionViewDelegateFlowLayout
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        return cellSize
     }
-    */
+    
+    // MARK: - IBAction
+    @IBAction func BackButtonTapped(sender: UIBarButtonItem) {
+        // 前画面に戻る
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
 
 }
