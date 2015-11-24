@@ -8,21 +8,45 @@
 
 import UIKit
 
-class AlbumViewController: UIViewController {
-    @IBOutlet weak var imageView: UIImageView!
+class AlbumCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var albumCollectionView: UICollectionView!
     
     
+    // MARK: - UIViewControllerDelegate
     override func viewDidLoad() {
-        super.viewDidLoad()
         
-        let key = Drawings.shareInstance?.lastKey()
-        let img = Drawings.shareInstance?.image(key!)
-        imageView.image = img
+        // collectionViewDelegateの設定
+        albumCollectionView.delegate = self
+        albumCollectionView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - UICollectionViewDataSource
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return (Drawings.shareInstance?.count())!
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        //cellの初期化
+        let cell: AlbumCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("AlbumCollectionViewCell", forIndexPath: indexPath) as! AlbumCollectionViewCell
+        
+        // Drawingsのkey配列を読み込む
+        if let keys: [String] = Drawings.shareInstance?.Keys(){
+            cell.imageView.image = Drawings.shareInstance?.image(keys[indexPath.row])
+        }
+        
+        return cell
+        
     }
     
 
