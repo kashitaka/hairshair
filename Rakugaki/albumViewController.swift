@@ -24,7 +24,7 @@ class AlbumCollectionViewController: UIViewController, UICollectionViewDelegate,
         
         //　collectionViewCellのサイズを設定する
         cellSize.height = self.view.frame.height / 4
-        cellSize.width = self.view.frame.width / 2 - 3
+        cellSize.width = self.view.frame.width / 2 - 15
         
         // cellの複数選択を許す
         self.albumCollectionView.allowsMultipleSelection = true;
@@ -32,6 +32,17 @@ class AlbumCollectionViewController: UIViewController, UICollectionViewDelegate,
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "pushDrawing") {
+            // pushDrawingが呼ばれたときの関数
+            let subVC: MyGraffitiViewController = (segue.destinationViewController as? MyGraffitiViewController)!
+            // MyGraffitiViewControllerにキーをセットする
+            if let selectedKey = sender as? String{
+                subVC.drawingkey = selectedKey
+            }
+        }
     }
     
     // MARK: - UICollectionViewDataSource
@@ -49,7 +60,7 @@ class AlbumCollectionViewController: UIViewController, UICollectionViewDelegate,
         let cell: AlbumCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("AlbumCollectionViewCell", forIndexPath: indexPath) as! AlbumCollectionViewCell
         
         // Drawingsのkey配列を読み込む
-        if let keys: [String] = Drawings.shareInstance?.Keys(){
+        if let keys: [String] = Drawings.shareInstance?.keys(){
             cell.imageView.image = Drawings.shareInstance?.image(keys[indexPath.row])
         }
         
@@ -57,7 +68,15 @@ class AlbumCollectionViewController: UIViewController, UICollectionViewDelegate,
         
     }
     
-    //MARK: - UICollectionViewDelegateFlowLayout
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        if let keys: [String] = Drawings.shareInstance?.keys(){
+            if let selectedkey: String = keys[indexPath.row] {
+                performSegueWithIdentifier("pushDrawing",sender: selectedkey)
+            }
+        }
+    }
+    
+    // MARK: - UICollectionViewDelegateFlowLayout
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         return cellSize
     }

@@ -85,7 +85,8 @@ class DrawingViewController: UIViewController, CDRTranslucentSideBarDelegate, AC
         let context: CGContextRef = UIGraphicsGetCurrentContext()!
         
         // 対象のview内の描画をcontextに複写する.
-        self.view.layer.renderInContext(context)
+        self.imageView.layer.renderInContext(context)
+        self.drawingView.layer.renderInContext(context)
         
         // 現在のcontextのビットマップをUIImageとして取得.
         let capturedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()

@@ -11,6 +11,7 @@
 		3706A7211C02FFD20041948B /* StartMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3706A7201C02FFD20041948B /* StartMenuViewController.swift */; };
 		3706A7231C0300F30041948B /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3706A7221C0300F30041948B /* AlbumViewController.swift */; };
 		3706A7281C04533B0041948B /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3706A7271C04533B0041948B /* AlbumCollectionViewCell.swift */; };
+		3706A72A1C09ACD30041948B /* MyGraffitiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3706A7291C09ACD30041948B /* MyGraffitiViewController.swift */; };
 		37AB59ED1BF3835400B0A0FB /* SideBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37AB59EC1BF3835400B0A0FB /* SideBarView.xib */; };
 		37AB59EF1BF383EF00B0A0FB /* SideBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AB59EE1BF383EF00B0A0FB /* SideBarView.swift */; };
 		37C189EB1BEDB26C006F92B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C189EA1BEDB26C006F92B3 /* AppDelegate.swift */; };
@@ -45,6 +46,7 @@
 		3706A7201C02FFD20041948B /* StartMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartMenuViewController.swift; sourceTree = "<group>"; };
 		3706A7221C0300F30041948B /* AlbumViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
 		3706A7271C04533B0041948B /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		3706A7291C09ACD30041948B /* MyGraffitiViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyGraffitiViewController.swift; sourceTree = "<group>"; };
 		37AB59EC1BF3835400B0A0FB /* SideBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SideBarView.xib; sourceTree = "<group>"; };
 		37AB59EE1BF383EF00B0A0FB /* SideBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarView.swift; sourceTree = "<group>"; };
 		37C189E71BEDB26C006F92B3 /* Rakugaki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rakugaki.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +101,7 @@
 				37C189EC1BEDB26C006F92B3 /* DrawingViewController.swift */,
 				3706A7221C0300F30041948B /* AlbumViewController.swift */,
 				3706A7271C04533B0041948B /* AlbumCollectionViewCell.swift */,
+				3706A7291C09ACD30041948B /* MyGraffitiViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 			files = (
 				3706A71D1C02E0710041948B /* Drawings.swift in Sources */,
 				37AB59EF1BF383EF00B0A0FB /* SideBarView.swift in Sources */,
+				3706A72A1C09ACD30041948B /* MyGraffitiViewController.swift in Sources */,
 				3706A7231C0300F30041948B /* AlbumViewController.swift in Sources */,
 				37C189ED1BEDB26C006F92B3 /* DrawingViewController.swift in Sources */,
 				37C189EB1BEDB26C006F92B3 /* AppDelegate.swift in Sources */,

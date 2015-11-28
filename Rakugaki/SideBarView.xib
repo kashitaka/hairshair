@@ -14,7 +14,7 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cD5-9Q-ogL" userLabel="Width Change">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <subviews>
-                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="IVQ-gP-FJf">
+                        <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="IVQ-gP-FJf">
                             <rect key="frame" x="18" y="140" width="564" height="31"/>
                             <connections>
                                 <action selector="sliderChanged:" destination="RAx-Xo-hZ6" eventType="valueChanged" id="IXf-OP-7Kg"/>
