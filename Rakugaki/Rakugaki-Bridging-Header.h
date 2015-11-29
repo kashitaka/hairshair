@@ -6,10 +6,8 @@
 //  Copyright © 2015年 kashitaka. All rights reserved.
 //
 
-#import <SDWebImage/UIImageView+WebCache.h>
 #import "ACEDrawingView.h"
 #import "CDRTranslucentSideBar.h"
-#import "NKOColorPickerView.h"
 
 #ifndef Rakugaki_Bridging_Header_h
 #define Rakugaki_Bridging_Header_h

@@ -21,7 +21,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="titleBackGround" translatesAutoresizingMaskIntoConstraints="NO" id="Hbt-wV-b1O">
                                 <rect key="frame" x="0.0" y="20" width="600" height="580"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bouzwithshadow" translatesAutoresizingMaskIntoConstraints="NO" id="R4W-4X-f5U">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bouz" translatesAutoresizingMaskIntoConstraints="NO" id="R4W-4X-f5U">
                                 <rect key="frame" x="0.0" y="-100" width="600" height="600"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bvw-pq-b0c">
@@ -359,7 +359,7 @@
     </scenes>
     <resources>
         <image name="BackAllow" width="25" height="25"/>
-        <image name="bouzwithshadow" width="763" height="1355"/>
+        <image name="bouz" width="763" height="1355"/>
         <image name="deleteIcon" width="25" height="25"/>
         <image name="geta" width="25" height="25"/>
         <image name="redo" width="25" height="25"/>
