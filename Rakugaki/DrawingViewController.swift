@@ -50,6 +50,9 @@ class DrawingViewController: UIViewController, CDRTranslucentSideBarDelegate, AC
         self.drawingView.frame.size = self.view.frame.size
         self.drawingView.center = self.view.center
         
+        //筆の太さを設定
+        self.drawingView.lineWidth = 6
+        
         // sideBarViewの設定
         // 現在の筆の太さの外側のビューを設定
         self.sideBarView.brushWidthTesterContainer.layer.borderColor = UIColor.darkGrayColor().CGColor
@@ -73,8 +76,8 @@ class DrawingViewController: UIViewController, CDRTranslucentSideBarDelegate, AC
     
     
     /*
-    お絵かきえりのViewをキャプチャする
-    :戻り値:UIImage
+    お絵かきえViewをキャプチャする
+    戻り値:UIImage
     */
     func getUIImageFromDrawingView() -> UIImage {
         //キャプチャ範囲を生成。画面のサイズと同じ
@@ -160,6 +163,14 @@ class DrawingViewController: UIViewController, CDRTranslucentSideBarDelegate, AC
         // 前画面に戻る
         self.dismissViewControllerAnimated(true, completion: nil)
 
+    }
+    
+    // パンジェスチャーのときの処理
+    @IBAction func panGesture(sender: UIScreenEdgePanGestureRecognizer) {
+        // ジェスチャーが始まったときに呼ばれる
+        if sender.state == .Began{
+            self.sideBar.show()
+        }
     }
 }
 

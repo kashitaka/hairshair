@@ -29,6 +29,10 @@ class AlbumCollectionViewController: UIViewController, UICollectionViewDelegate,
         // cellの複数選択を許す
         self.albumCollectionView.allowsMultipleSelection = true;
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        albumCollectionView.reloadData()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

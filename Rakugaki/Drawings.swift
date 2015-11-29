@@ -81,7 +81,7 @@ public class Drawings {
     public func remove(dates: [String]){
         for date in dates{
             if let filename = drawings[date]{
-                let fullpath = path.stringByAppendingString(filename)
+                let fullpath = path.stringByAppendingString("/\(filename)")
             
                 let manager = NSFileManager()
                 do {
@@ -89,8 +89,6 @@ public class Drawings {
                     try manager.removeItemAtPath(fullpath)
                     // drawingsの配列から削除
                     self.drawings.removeValueForKey(date)
-                    //
-                    print("\(fullpath)を削除")
                 } catch _ {}
             }
         }
