@@ -23,6 +23,8 @@ class SideBarView: UIView {
     @IBOutlet weak var colorView03: UIView!
     @IBOutlet weak var colorView04: UIView!
     @IBOutlet weak var colorView05: UIView!
+    @IBOutlet weak var shareButton: UIButton!
+    
     
     weak var delegate: SideBarViewDelegate! = nil
     
@@ -45,10 +47,14 @@ class SideBarView: UIView {
     @IBAction func colorView05Tapped(sender: UIButton) {
         delegate?.colorView05ButtonTapped(sender)
     }
+    @IBAction func shareButtonTapped(sender: UIButton) {
+        delegate?.shareButtonTapped(sender)
+    }
 }
 
 protocol SideBarViewDelegate: class {
     func sliderChanged(slider:UISlider)
+    func shareButtonTapped(sender:UIButton)
     func colorView01ButtonTapped(sender: UIButton)
     func colorView02ButtonTapped(sender: UIButton)
     func colorView03ButtonTapped(sender: UIButton)

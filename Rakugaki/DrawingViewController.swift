@@ -185,6 +185,24 @@ extension DrawingViewController: SideBarViewDelegate {
         updateSideBarView()
     }
     
+    // シェアボタン押下時
+    func shareButtonTapped(sender:UIButton){
+        
+        let shareImage = getUIImageFromDrawingView()
+
+        // 初期化処理
+        let activityVC = UIActivityViewController(activityItems: [ActivityText(), shareImage], applicationActivities: nil)
+        
+        activityVC.excludedActivityTypes = [
+            UIActivityTypePostToWeibo,
+            UIActivityTypeAssignToContact
+        ]
+        
+        // UIActivityViewControllerを表示
+        self.presentViewController(activityVC, animated: true, completion: nil)
+        
+    }
+    
     // このへんすごい冗長で頭悪い。なんとかしたい。
     // 一番左の色が押された
     func colorView01ButtonTapped(sender: UIButton){

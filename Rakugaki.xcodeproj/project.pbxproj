@@ -21,6 +21,7 @@
 		37C189F51BEDB26C006F92B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37C189F31BEDB26C006F92B3 /* LaunchScreen.storyboard */; };
 		37C18A001BEDB26D006F92B3 /* RakugakiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C189FF1BEDB26D006F92B3 /* RakugakiTests.swift */; };
 		37C18A0B1BEDB26D006F92B3 /* RakugakiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C18A0A1BEDB26D006F92B3 /* RakugakiUITests.swift */; };
+		37D0670A1C0B23E800708500 /* AcitivityText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D067091C0B23E800708500 /* AcitivityText.swift */; };
 		E1C542C1364530AF67D9C29C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA22C2027D247A878D7A8046 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +64,7 @@
 		37C18A0A1BEDB26D006F92B3 /* RakugakiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RakugakiUITests.swift; sourceTree = "<group>"; };
 		37C18A0C1BEDB26D006F92B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37C18A181BEDCD4F006F92B3 /* Rakugaki-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rakugaki-Bridging-Header.h"; sourceTree = "<group>"; };
+		37D067091C0B23E800708500 /* AcitivityText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcitivityText.swift; sourceTree = "<group>"; };
 		A749EF9033E1A8BB4A304E51 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CA22C2027D247A878D7A8046 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBDBFE5314F90D56A9BDDC5A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				37C189EA1BEDB26C006F92B3 /* AppDelegate.swift */,
 				37AB59EE1BF383EF00B0A0FB /* SideBarView.swift */,
 				3706A71C1C02E0710041948B /* Drawings.swift */,
+				37D067091C0B23E800708500 /* AcitivityText.swift */,
 				3706A7241C0372D30041948B /* ViewController */,
 				37C18A181BEDCD4F006F92B3 /* Rakugaki-Bridging-Header.h */,
 				37C189F11BEDB26C006F92B3 /* Assets.xcassets */,
@@ -356,6 +359,7 @@
 				3706A7231C0300F30041948B /* AlbumViewController.swift in Sources */,
 				37C189ED1BEDB26C006F92B3 /* DrawingViewController.swift in Sources */,
 				37C189EB1BEDB26C006F92B3 /* AppDelegate.swift in Sources */,
+				37D0670A1C0B23E800708500 /* AcitivityText.swift in Sources */,
 				3706A7211C02FFD20041948B /* StartMenuViewController.swift in Sources */,
 				3706A7281C04533B0041948B /* AlbumCollectionViewCell.swift in Sources */,
 			);

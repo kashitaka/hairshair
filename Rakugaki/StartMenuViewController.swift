@@ -59,7 +59,7 @@ class StartMenuViewController: UIViewController {
         if let keys = Drawings.shareInstance?.keys(){
             if indexForAnimation >= keys.count{
                 indexForAnimation = 0
-                bouzImage.image = UIImage(named: "bouzwithshadow")
+                bouzImage.image = UIImage(named: "bouz")
             } else {
                 bouzImage.image = Drawings.shareInstance?.image(keys[indexForAnimation])
                 indexForAnimation++

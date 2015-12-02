@@ -73,8 +73,6 @@ public class Drawings {
         }else{
             print("save error")
         }
-
-        print(drawings)
     }
     
     // 指定された日付の配列を引数に、その画像を削除する
