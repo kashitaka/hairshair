@@ -22,6 +22,7 @@
 		37C18A001BEDB26D006F92B3 /* RakugakiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C189FF1BEDB26D006F92B3 /* RakugakiTests.swift */; };
 		37C18A0B1BEDB26D006F92B3 /* RakugakiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37C18A0A1BEDB26D006F92B3 /* RakugakiUITests.swift */; };
 		37D0670A1C0B23E800708500 /* AcitivityText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D067091C0B23E800708500 /* AcitivityText.swift */; };
+		37DEF98E1D78738800CD485C /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 37DEF98D1D78738800CD485C /* README.md */; };
 		E1C542C1364530AF67D9C29C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CA22C2027D247A878D7A8046 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		37C18A0C1BEDB26D006F92B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37C18A181BEDCD4F006F92B3 /* Rakugaki-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rakugaki-Bridging-Header.h"; sourceTree = "<group>"; };
 		37D067091C0B23E800708500 /* AcitivityText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcitivityText.swift; sourceTree = "<group>"; };
+		37DEF98D1D78738800CD485C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A749EF9033E1A8BB4A304E51 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		CA22C2027D247A878D7A8046 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBDBFE5314F90D56A9BDDC5A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 		37C189DE1BEDB26C006F92B3 = {
 			isa = PBXGroup;
 			children = (
+				37DEF98D1D78738800CD485C /* README.md */,
 				37C189E91BEDB26C006F92B3 /* Rakugaki */,
 				37C189FE1BEDB26D006F92B3 /* RakugakiTests */,
 				37C18A091BEDB26D006F92B3 /* RakugakiUITests */,
@@ -355,6 +358,7 @@
 			files = (
 				3706A71D1C02E0710041948B /* Drawings.swift in Sources */,
 				37AB59EF1BF383EF00B0A0FB /* SideBarView.swift in Sources */,
+				37DEF98E1D78738800CD485C /* README.md in Sources */,
 				3706A72A1C09ACD30041948B /* MyGraffitiViewController.swift in Sources */,
 				3706A7231C0300F30041948B /* AlbumCollectionViewController.swift in Sources */,
 				37C189ED1BEDB26C006F92B3 /* DrawingViewController.swift in Sources */,
