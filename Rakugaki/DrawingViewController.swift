@@ -203,6 +203,12 @@ extension DrawingViewController: SideBarViewDelegate {
         
     }
     
+    func exitButtonTapped(sender:UIButton){
+        let startMenuViewController: StartMenuViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("startMenu") as! StartMenuViewController)
+        startMenuViewController.modalTransitionStyle = UIModalTransitionStyle.PartialCurl
+        self.presentViewController(startMenuViewController, animated: true, completion: nil)
+    }
+    
     // このへんすごい冗長で頭悪い。なんとかしたい。
     // 一番左の色が押された
     func colorView01ButtonTapped(sender: UIButton){

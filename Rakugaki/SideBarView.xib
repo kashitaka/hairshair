@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SideBarView" customModule="Rakugaki" customModuleProvider="target"/>
@@ -22,6 +22,9 @@
                                     <color key="backgroundColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <state key="normal" title="Exit" image="ExitIcon"/>
+                                    <connections>
+                                        <action selector="exitButtonTapped:" destination="RAx-Xo-hZ6" eventType="touchUpInside" id="cZC-w5-VKS"/>
+                                    </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ReV-3P-4St">
                                     <rect key="frame" x="301" y="0.0" width="299" height="40"/>
@@ -242,6 +245,7 @@
                 <outlet property="colorView04" destination="YZL-Av-AzI" id="pCI-4b-252"/>
                 <outlet property="colorView05" destination="Vlz-Rf-wlh" id="9t1-Dl-t9H"/>
                 <outlet property="currentColorView" destination="hbn-zN-Qvg" id="RwM-sa-cmU"/>
+                <outlet property="exitButton" destination="pAc-yZ-8xT" id="IoL-Qm-ISj"/>
                 <outlet property="shareButton" destination="ReV-3P-4St" id="D3r-gM-zeY"/>
                 <outlet property="slider" destination="IVQ-gP-FJf" id="aEm-IR-5ea"/>
             </connections>
